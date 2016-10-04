@@ -75,6 +75,21 @@ class ValidatorPluginManagerCompatibilityTest extends TestCase
             }
 
             // Skipping due to required options
+            if (strpos($target, '\\GreaterThan')) {
+                continue;
+            }
+
+            // Skipping due to required options
+            if (strpos($target, '\\IsInstanceOf')) {
+                continue;
+            }
+
+            // Skipping due to required options
+            if (strpos($target, '\\LessThan')) {
+                continue;
+            }
+
+            // Skipping due to required options
             if (strpos($target, '\\Regex')) {
                 continue;
             }
