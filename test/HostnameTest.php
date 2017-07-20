@@ -635,4 +635,10 @@ class HostnameTest extends TestCase
         $validator = new Hostname();
         $this->assertTrue($validator->isValid('cafecafe.de'));
     }
+
+    public function testHostnameAcceptsDotNameAsIDN()
+    {
+        $validator = new Hostname();
+        $this->assertTrue($validator->isValid('nødtvedt.name'));
+    }
 }
